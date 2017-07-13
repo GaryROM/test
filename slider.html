@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+	<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+	<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+	<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Photography1 - Slider Revolution</title>
+		<meta name="description" content="Slider Revolution Example" />
+		<meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition" />
+		<meta name="author" content="ThemePunch" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- LOAD JQUERY LIBRARY -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+		
+		<!-- LOADING FONTS AND ICONS -->
+		<link href="http://fonts.googleapis.com/css?family=Raleway:300%2C100%2C200%2C600%2C400%2C500" rel="stylesheet" property="stylesheet" type="text/css" media="all">
+		
+		<link rel="stylesheet" type="text/css" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+		
+		<!-- REVOLUTION STYLE SHEETS -->
+		<link rel="stylesheet" type="text/css" href="css/settings.css">
+		<!-- REVOLUTION LAYERS STYLES -->
+		<style>.tp-caption.Photography-Display,.Photography-Display{color:rgba(58,58,58,1.00);font-size:60px;line-height:50px;font-weight:300;font-style:normal;font-family:Photography-Display;text-decoration:none;background-color:transparent;border-color:transparent;border-style:none;border-width:0px 0px 0px 0px;border-radius:0px 0px 0px 0px;letter-spacing:5px}.tp-caption.Photography-Subline,.Photography-Subline{color:rgba(119,119,119,1.00);font-size:20px;line-height:30px;font-weight:300;font-style:normal;font-family:Raleway;text-decoration:none;background-color:transparent;border-color:transparent;border-style:none;border-width:0px;border-radius:0 0 0 0px;letter-spacing:3px}.tp-caption.Photography-ImageHover,.Photography-ImageHover{color:rgba(255,255,255,1.00);font-size:20px;line-height:22px;font-weight:400;font-style:normal;font-family:;text-decoration:none;background-color:transparent;border-color:rgba(255,255,255,0);border-style:none;border-width:0px;border-radius:0 0 0 0px}.tp-caption.Photography-ImageHover:hover,.Photography-ImageHover:hover{color:rgba(255,255,255,1.00);text-decoration:none;background-color:transparent;border-color:transparent;border-style:none;border-width:0px;border-radius:0 0 0 0px}.tp-caption.Photography-Menuitem,.Photography-Menuitem{color:rgba(255,255,255,1.00);font-size:20px;line-height:20px;font-weight:300;font-style:normal;font-family:Raleway;text-decoration:none;background-color:rgba(0,0,0,0.65);border-color:transparent;border-style:none;border-width:0px;border-radius:0 0 0 0px;letter-spacing:2px}.tp-caption.Photography-Menuitem:hover,.Photography-Menuitem:hover{color:rgba(255,255,255,1.00);text-decoration:none;background-color:rgba(0,255,222,0.65);border-color:transparent;border-style:none;border-width:0px;border-radius:0 0 0 0px;cursor:pointer}.tp-caption.Photography-Textblock,.Photography-Textblock{color:rgba(255,255,255,1.00);font-size:17px;line-height:30px;font-weight:300;font-style:normal;font-family:Raleway;text-decoration:none;background-color:transparent;border-color:transparent;border-style:none;border-width:0px;border-radius:0 0 0 0px;letter-spacing:2px}.tp-caption.Photography-Subline-2,.Photography-Subline-2{color:rgba(255,255,255,0.35);font-size:20px;line-height:30px;font-weight:300;font-style:normal;font-family:Raleway;text-decoration:none;background-color:transparent;border-color:transparent;border-style:none;border-width:0px;border-radius:0 0 0 0px;letter-spacing:3px}.tp-caption.Photography-Button,.Photography-Button{color:rgba(255,255,255,1.00);font-size:15px;line-height:15px;font-weight:600;font-style:normal;font-family:Raleway;text-decoration:none;background-color:rgba(0,0,0,0);border-color:rgba(255,255,255,0.25);border-style:solid;border-width:1px;border-radius:30px 30px 30px 30px;letter-spacing:1px}.tp-caption.Photography-Button:hover,.Photography-Button:hover{color:rgba(255,255,255,1.00);text-decoration:none;background-color:rgba(0,0,0,0);border-color:rgba(255,255,255,1.00);border-style:solid;border-width:1px;border-radius:30px 30px 30px 30px}</style>
+<style type="text/css">@font-face{font-family:'Azedo-light';  src:url('http://www.garyrom.byethost5.com/wp-content/webfonts/Azedo-light.otf') format('opentype');  font-weight:normal;  font-style:normal}@font-face{font-family:'irene-CAPS-thin';  src:url('http://www.garyrom.byethost5.com/wp-content/webfonts/irene-CAPS-thin.ttf') format('truetype');  font-weight:normal;  font-style:normal}@font-face{font-family:'Kanji_FreeVersion';  src:url('http://www.garyrom.byethost5.com/wp-content/webfonts/Kanji_FreeVersion.ttf') format('truetype');  font-weight:normal;  font-style:normal}@font-face{font-family:'Azedo-Light';  src:url('http://www.garyrom.byethost5.com/wp-content/webfonts/Azedo-Light.otf') format('opentype');  font-weight:normal;  font-style:normal}@font-face{font-family:'Kayak Sans Bold';  src:url('http://www.garyrom.byethost5.com/wp-content/webfonts/Kayak_Sans_Bold.otf') format('opentype');  font-weight:normal;  font-style:normal}@font-face{font-family:'Anders';  src:url('http://www.garyrom.byethost5.com/wp-content/webfonts/Anders.ttf') format('truetype');  font-weight:normal;  font-style:normal}</style>
+		<!-- REVOLUTION JS FILES -->
+		<script type="text/javascript" src="js/jquery.themepunch.tools.min.js"></script>
+		<script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
+
+		<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->	
+		<script type="text/javascript" src="js/extensions/revolution.extension.actions.min.js"></script>
+		<script type="text/javascript" src="js/extensions/revolution.extension.carousel.min.js"></script>
+		<script type="text/javascript" src="js/extensions/revolution.extension.kenburn.min.js"></script>
+		<script type="text/javascript" src="js/extensions/revolution.extension.layeranimation.min.js"></script>
+		<script type="text/javascript" src="js/extensions/revolution.extension.migration.min.js"></script>
+		<script type="text/javascript" src="js/extensions/revolution.extension.navigation.min.js"></script>
+		<script type="text/javascript" src="js/extensions/revolution.extension.parallax.min.js"></script>
+		<script type="text/javascript" src="js/extensions/revolution.extension.slideanims.min.js"></script>
+		<script type="text/javascript" src="js/extensions/revolution.extension.video.min.js"></script>
+	</head>
+	
+	<body>
+			
+
+<div id="rev_slider_2_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="photography1" data-source="gallery" style="background-color:transparent;padding:0px;">
+<!-- START REVOLUTION SLIDER 5.3.1.5 fullscreen mode -->
+	<div id="rev_slider_2_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.3.1.5">
+<ul>	<!-- SLIDE  -->
+	<li data-index="rs-11" data-transition="slideoververtical" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1500"  data-thumb="assets/kk-100x50.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="assets/kk.jpg"  alt="" title="kk"  width="1920" height="1080" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="9" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 1 -->
+		<div class="tp-caption Photography-Subline   tp-resizeme rs-parallaxlevel-1" 
+			 id="slide-11-layer-4" 
+			 data-x="['center','center','center','center']" data-hoffset="['-447','42','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-94','-157','-157','-80']" 
+						data-fontsize="['20','20','20','17']"
+			data-lineheight="['30','30','30','26']"
+			data-color="['rgba(46, 51, 53, 1.00)','rgba(119, 119, 119, 1.00)','rgba(119, 119, 119, 1.00)','rgba(119, 119, 119, 1.00)']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":500.000305176,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5; white-space: nowrap; color: rgba(46, 51, 53, 1.00);">Bonjour, moi c'est Gary </div>
+
+		<!-- LAYER NR. 2 -->
+		<div class="tp-caption Photography-Display   tp-resizeme rs-parallaxlevel-1" 
+			 id="slide-11-layer-1" 
+			 data-x="['center','center','center','center']" data-hoffset="['-348','33','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['3','-40','-40','-20']" 
+						data-fontsize="['80','80','80','40']"
+			data-lineheight="['70','70','70','50']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":750.000305176,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6; white-space: nowrap; font-size: 80px; line-height: 70px; font-weight: 100; color: rgba(255, 255, 255, 1.00);font-family:Raleway;">PORTFOLIO </div>
+
+		<!-- LAYER NR. 3 -->
+		<div class="tp-caption Photography-Display   tp-resizeme rs-parallaxlevel-1" 
+			 id="slide-11-layer-3" 
+			 data-x="['center','center','center','center']" data-hoffset="['-327','160','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['78','40','40','20']" 
+						data-fontsize="['80','80','80','40']"
+			data-lineheight="['70','70','70','50']"
+			data-fontweight="['200','100','100','100']"
+			data-color="['rgba(234, 158, 65, 1.00)','rgba(0, 255, 222, 1.00)','rgba(0, 255, 222, 1.00)','rgba(0, 255, 222, 1.00)']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1000.00030518,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 7; white-space: nowrap; font-size: 80px; line-height: 70px; font-weight: 200; color: rgba(234, 158, 65, 1.00);font-family:Raleway;">NUMERIQUE </div>
+
+		<!-- LAYER NR. 4 -->
+		<div class="tp-caption rev-btn rev-maxround rev-bordered   rs-parallaxlevel-1" 
+			 id="slide-11-layer-6" 
+			 data-x="['center','center','center','center']" data-hoffset="['312','-66','0','0']" 
+			 data-y="['middle','middle','bottom','bottom']" data-voffset="['208','181','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-12","delay":""}]'
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":1250.00030518,"speed":2010,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[175%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"},{"frame":"hover","speed":"300","ease":"Power3.easeOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[13,13,13,13]"
+			data-paddingright="[35,35,35,35]"
+			data-paddingbottom="[13,13,13,13]"
+			data-paddingleft="[35,35,35,35]"
+
+			style="z-index: 8; white-space: nowrap; font-size: 15px; line-height: 15px; font-weight: 600; color: rgba(255, 255, 255, 1.00);font-family:Raleway;background-color:rgba(0, 0, 0, 0);border-color:rgba(255, 255, 255, 0.25);border-style:solid;border-width:1px 1px 1px 1px;border-radius:30px 30px 30px 30px;letter-spacing:1px;">MON PORTFOLIO </div>
+
+		<!-- LAYER NR. 5 -->
+		<div class="tp-caption Photography-Subline   tp-resizeme rs-parallaxlevel-1" 
+			 id="slide-11-layer-8" 
+			 data-x="['center','center','center','center']" data-hoffset="['-471','42','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-60','-157','-157','-80']" 
+						data-fontsize="['20','20','20','17']"
+			data-lineheight="['30','30','30','26']"
+			data-color="['rgba(96, 112, 108, 1.00)','rgba(119, 119, 119, 1.00)','rgba(119, 119, 119, 1.00)','rgba(119, 119, 119, 1.00)']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":500.000305176,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 9; white-space: nowrap; color: rgba(96, 112, 108, 1.00);">Bienvenue sur mon </div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-12" data-transition="slideoververtical" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1500"  data-thumb="assets/kk-1-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Portfolio" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="assets/kk-1.jpg"  alt="" title="kk"  width="1920" height="1080" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 6 -->
+		<div class="tp-caption Photography-Subline   tp-resizeme" 
+			 id="slide-12-layer-4" 
+			 data-x="['center','center','center','center']" data-hoffset="['342','40','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['-137','-161','-187','-197']" 
+						data-fontsize="['40','20','20','17']"
+			data-lineheight="['30','30','30','26']"
+			data-color="['rgba(0, 237, 197, 1.00)','rgba(119, 119, 119, 1.00)','rgba(119, 119, 119, 1.00)','rgba(119, 119, 119, 1.00)']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":499.921875,"speed":2010,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5; white-space: nowrap; font-size: 40px; color: rgba(0, 237, 197, 1.00);">MES DERNIERS <span style="color: #fff;">PROJETS</span> </div>
+
+		<!-- LAYER NR. 7 -->
+		<div class="tp-caption Photography-ImageHover   tp-resizeme" 
+			 id="slide-12-layer-7" 
+			 data-x="['left','left','center','center']" data-hoffset="['460','400','-160','-80']" 
+			 data-y="['top','top','top','top']" data-voffset="['330','280','350','200']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="image" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-13","delay":""}]'
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":750,"speed":1520,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"},{"frame":"hover","speed":"1000","ease":"Power3.easeInOut","to":"o:0.5;sX:0.8;sY:0.8;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6; line-height: 22px;cursor:pointer;"><img src="assets/mariage3.jpg" alt="" data-ww="['249px','150px','150px','150px']" data-hh="['140px','100px','100px','100px']" width="1920" height="1080" data-no-retina> </div>
+
+		<!-- LAYER NR. 8 -->
+		<div class="tp-caption Photography-ImageHover   tp-resizeme" 
+			 id="slide-12-layer-8" 
+			 data-x="['left','left','center','center']" data-hoffset="['720','560','0','80']" 
+			 data-y="['top','top','top','top']" data-voffset="['330','280','350','200']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="image" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-14","delay":""}]'
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":849.84375,"speed":1490,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"},{"frame":"hover","speed":"1000","ease":"Power3.easeInOut","to":"o:0.5;sX:0.8;sY:0.8;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 7; line-height: 22px;cursor:pointer;"><img src="assets/site.jpg" alt="" data-ww="['251px','150px','150px','150px']" data-hh="['140px','100px','100px','100px']" width="1920" height="1080" data-no-retina> </div>
+
+		<!-- LAYER NR. 9 -->
+		<div class="tp-caption Photography-ImageHover   tp-resizeme" 
+			 id="slide-12-layer-9" 
+			 data-x="['left','left','center','center']" data-hoffset="['980','720','160','-80']" 
+			 data-y="['top','top','top','top']" data-voffset="['330','280','350','310']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="image" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-15","delay":""}]'
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":949.921875,"speed":1530,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"},{"frame":"hover","speed":"1000","ease":"Power3.easeInOut","to":"o:0.5;sX:0.8;sY:0.8;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 8; line-height: 22px;cursor:pointer;"><img src="assets/Image1.jpg" alt="" data-ww="['251px','150px','150px','150px']" data-hh="['140px','100px','100px','100px']" width="1920" height="1080" data-no-retina> </div>
+
+		<!-- LAYER NR. 10 -->
+		<div class="tp-caption Photography-ImageHover   tp-resizeme" 
+			 id="slide-12-layer-10" 
+			 data-x="['left','left','center','center']" data-hoffset="['460','400','-160','80']" 
+			 data-y="['top','top','top','top']" data-voffset="['507','390','460','310']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="image" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-21","delay":""}]'
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1050,"speed":1490,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"},{"frame":"hover","speed":"1000","ease":"Power3.easeInOut","to":"o:0.5;sX:0.8;sY:0.8;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 9; line-height: 22px;cursor:pointer;"><img src="assets/Image2-1.jpg" alt="" data-ww="['249px','150px','150px','150px']" data-hh="['139px','100px','100px','100px']" width="1920" height="1080" data-no-retina> </div>
+
+		<!-- LAYER NR. 11 -->
+		<div class="tp-caption Photography-ImageHover   tp-resizeme" 
+			 id="slide-12-layer-11" 
+			 data-x="['left','left','center','center']" data-hoffset="['720','560','0','-80']" 
+			 data-y="['top','top','top','top']" data-voffset="['507','390','460','420']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="image" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-17","delay":""}]'
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1149.84375,"speed":1520,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"},{"frame":"hover","speed":"1000","ease":"Power3.easeInOut","to":"o:0.5;sX:0.8;sY:0.8;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 10; line-height: 22px;cursor:pointer;"><img src="assets/Image3.jpg" alt="" data-ww="['251px','150px','150px','150px']" data-hh="['139px','100px','100px','100px']" width="1920" height="1080" data-no-retina> </div>
+
+		<!-- LAYER NR. 12 -->
+		<div class="tp-caption Photography-ImageHover   tp-resizeme" 
+			 id="slide-12-layer-12" 
+			 data-x="['left','left','center','center']" data-hoffset="['980','720','160','80']" 
+			 data-y="['top','top','top','top']" data-voffset="['505','390','460','420']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="image" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-22","delay":""}]'
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1249.921875,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"},{"frame":"hover","speed":"1000","ease":"Power3.easeInOut","to":"o:0.5;sX:0.8;sY:0.8;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 11; line-height: 22px;cursor:pointer;"><img src="assets/kkk.jpg" alt="" data-ww="['251px','150px','150px','150px']" data-hh="['140px','100px','100px','100px']" width="1920" height="1080" data-no-retina> </div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-13" data-transition="slideoverhorizontal" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1500"  data-thumb="assets/mariage3-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="ALEXTICIA" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="assets/mariage3.jpg"  alt="" title="mariage3"  width="1920" height="1080" data-bgposition="left center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 13 -->
+		<div class="tp-caption Photography-Display   tp-resizeme" 
+			 id="slide-13-layer-1" 
+			 data-x="['right','left','center','center']" data-hoffset="['420','680','0','-6']" 
+			 data-y="['middle','top','top','top']" data-voffset="['-396','16','200','50']" 
+						data-fontsize="['60','60','60','40']"
+			data-color="['rgba(198, 0, 229, 1.00)','rgba(198, 0, 229, 1.00)','rgba(10, 0, 0, 1.00)','rgba(226, 113, 0, 1.00)']"
+			data-width="['346','none','none','none']"
+			data-height="['73','none','none','none']"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":500,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5; min-width: 346px; max-width: 346px; max-width: 73px; max-width: 73px; white-space: nowrap; font-weight: 100; color: rgba(198, 0, 229, 1.00);font-family:Raleway;">ALEXTICIA </div>
+
+		<!-- LAYER NR. 14 -->
+		<div class="tp-caption Photography-Subline   tp-resizeme" 
+			 id="slide-13-layer-4" 
+			 data-x="['right','left','center','center']" data-hoffset="['424','948','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['76','75','259','124']" 
+						data-fontsize="['20','20','20','17']"
+			data-lineheight="['30','30','30','26']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":750,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6; white-space: nowrap;">Vidéo </div>
+
+		<!-- LAYER NR. 15 -->
+		<div class="tp-caption Photography-Textblock   tp-resizeme" 
+			 id="slide-13-layer-7" 
+			 data-x="['right','left','center','center']" data-hoffset="['425','683','0','0']" 
+			 data-y="['middle','top','top','top']" data-voffset="['-232','109','311','212']" 
+						data-lineheight="['30','30','30','26']"
+			data-color="['rgba(255, 255, 255, 1.00)','rgba(255, 255, 255, 1.00)','rgba(10, 10, 10, 1.00)','rgba(10, 0, 0, 1.00)']"
+			data-width="['448','336','500','400']"
+			data-height="['121','235','none','none']"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1000,"speed":1510,"frame":"0","from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"x:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 7; min-width: 448px; max-width: 448px; max-width: 121px; max-width: 121px; white-space: normal;">Une vidéo de mariage réalisée en octobre 2016. Une première expérience dans ce domaine, qui demande de la patience et de la présence.        
+     Un beau moment. </div>
+
+		<!-- LAYER NR. 16 -->
+		<div class="tp-caption   tp-resizeme tp-videolayer" 
+			 id="slide-13-layer-9" 
+			 data-x="['left','left','center','center']" data-hoffset="['1113','633','0','-11']" 
+			 data-y="['top','top','top','top']" data-voffset="['301','279','510','426']" 
+						data-whitespace="nowrap"
+ 
+			data-type="video" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1240,"speed":290,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":310,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-ytid="BZzvEAt_Jxw" data-videoattributes="version=3&amp;enablejsapi=1&amp;html5=1&amp;volume=100&hd=1&wmode=opaque&showinfo=0&rel=0;;origin=http://www.garyrom.byethost5.com;" data-videorate="1" data-videowidth="['374px','374px','378px','378px']" data-videoheight="['217px','217px','232px','232px']" data-videocontrols="controls" data-videoloop="none"			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-autoplay="off" 
+			data-volume="100"
+			style="z-index: 8;"> </div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-14" data-transition="slideoverhorizontal" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1500"  data-thumb="assets/site-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="DKT" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="assets/site.jpg"  alt="" title="site"  width="1920" height="1080" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 17 -->
+		<div class="tp-caption tp-shape tp-shapewrapper   tp-resizeme" 
+			 id="slide-14-layer-8" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+						data-width="full"
+			data-height="full"
+			data-whitespace="nowrap"
+ 
+			data-type="shape" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1500.00030518,"speed":1490,"frame":"0","from":"z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","ease":"nothing"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5;background-color:rgba(0, 0, 0, 0.50);"> </div>
+
+		<!-- LAYER NR. 18 -->
+		<div class="tp-caption Photography-Display   tp-resizeme" 
+			 id="slide-14-layer-1" 
+			 data-x="['left','left','center','center']" data-hoffset="['80','80','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['35','130','200','140']" 
+						data-fontsize="['60','60','60','40']"
+			data-width="['555','none','none','none']"
+			data-height="none"
+			data-whitespace="['normal','nowrap','nowrap','nowrap']"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":500.000305176,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6; min-width: 555px; max-width: 555px; white-space: normal; font-weight: 100; color: rgba(255, 255, 255, 1.00);font-family:Raleway;">COUPE DE FRANCE  DES MONITEURS </div>
+
+		<!-- LAYER NR. 19 -->
+		<div class="tp-caption Photography-Subline-2   tp-resizeme" 
+			 id="slide-14-layer-4" 
+			 data-x="['left','left','center','center']" data-hoffset="['83','80','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['187','189','259','191']" 
+						data-fontsize="['20','20','20','17']"
+			data-fontweight="['400','300','300','300']"
+			data-color="['rgba(0, 242, 255, 0.35)','rgba(255, 255, 255, 0.35)','rgba(255, 255, 255, 0.35)','rgba(255, 255, 255, 0.35)']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":750.000305176,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 7; white-space: nowrap; font-weight: 400; color: rgba(0, 242, 255, 0.35);">FILM D'ENTREPRISE </div>
+
+		<!-- LAYER NR. 20 -->
+		<div class="tp-caption Photography-Textblock   tp-resizeme" 
+			 id="slide-14-layer-7" 
+			 data-x="['left','left','center','center']" data-hoffset="['80','80','0','6']" 
+			 data-y="['top','top','top','top']" data-voffset="['320','280','323','256']" 
+						data-lineheight="['30','30','30','26']"
+			data-width="['491','493','500','401']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1000.00030518,"speed":1510,"frame":"0","from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"x:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 8; min-width: 491px; max-width: 491px; white-space: normal;">Vidéo réalisée pour DECATHLON LANNION, dans le cadre de la coupe de France des moniteurs 2016. </div>
+
+		<!-- LAYER NR. 21 -->
+		<div class="tp-caption   tp-resizeme tp-videolayer" 
+			 id="slide-14-layer-10" 
+			 data-x="['left','left','left','left']" data-hoffset="['-255','-255','-255','-255']" 
+			 data-y="['top','top','top','top']" data-voffset="['481','481','481','481']" 
+						data-whitespace="nowrap"
+ 
+			data-type="video" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1250.00030518,"speed":1040,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-ytid="eQrqo7uafqE" data-videoattributes="version=3&amp;enablejsapi=1&amp;html5=1&amp;volume=100&hd=1&wmode=opaque&showinfo=0&rel=0;;origin=http://www.garyrom.byethost5.com;" data-videorate="1" data-videowidth="395px" data-videoheight="228px" data-videocontrols="controls" data-videoloop="none"			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-autoplay="off" 
+			data-volume="100"
+			style="z-index: 10;"> </div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-15" data-transition="slideoverhorizontal" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1500"  data-thumb="assets/Image1-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Boxe" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="assets/Image1.jpg"  alt="" title="image1"  width="1920" height="1080" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 22 -->
+		<div class="tp-caption tp-shape tp-shapewrapper   tp-resizeme" 
+			 id="slide-15-layer-8" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+						data-width="full"
+			data-height="full"
+			data-whitespace="nowrap"
+ 
+			data-type="shape" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1500,"speed":1490,"frame":"0","from":"z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":1010,"frame":"999","to":"auto:auto;","ease":"nothing"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5;background-color:rgba(0, 0, 0, 0.50);"> </div>
+
+		<!-- LAYER NR. 23 -->
+		<div class="tp-caption Photography-Display   tp-resizeme" 
+			 id="slide-15-layer-1" 
+			 data-x="['left','left','center','center']" data-hoffset="['76','80','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['95','130','200','140']" 
+						data-fontsize="['60','60','60','40']"
+			data-width="['738','none','none','none']"
+			data-height="['182','none','none','none']"
+			data-whitespace="['normal','nowrap','nowrap','nowrap']"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":500,"speed":2010,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6; min-width: 738px; max-width: 738px; max-width: 182px; max-width: 182px; white-space: normal; font-weight: 100; color: rgba(255, 255, 255, 1.00);font-family:Raleway;">Championnat de Bretagne Universitaire de Boxe </div>
+
+		<!-- LAYER NR. 24 -->
+		<div class="tp-caption Photography-Subline-2   tp-resizeme" 
+			 id="slide-15-layer-4" 
+			 data-x="['left','left','center','center']" data-hoffset="['75','80','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['261','189','259','191']" 
+						data-fontsize="['20','20','20','17']"
+			data-fontweight="['500','300','300','300']"
+			data-color="['rgba(255, 0, 0, 0.35)','rgba(255, 255, 255, 0.35)','rgba(255, 255, 255, 0.35)','rgba(255, 255, 255, 0.35)']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":750,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 7; white-space: nowrap; font-weight: 500; color: rgba(255, 0, 0, 0.35);">PHOTOS </div>
+
+		<!-- LAYER NR. 25 -->
+		<div class="tp-caption Photography-Textblock   tp-resizeme" 
+			 id="slide-15-layer-7" 
+			 data-x="['left','left','center','center']" data-hoffset="['80','80','0','6']" 
+			 data-y="['top','top','top','top']" data-voffset="['323','280','324','256']" 
+						data-lineheight="['30','30','30','26']"
+			data-width="['491','493','500','401']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"x:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 8; min-width: 491px; max-width: 491px; white-space: normal;">Photos bientôt disponibles sur le site </div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-21" data-transition="slideoverhorizontal" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1500"  data-thumb="assets/Image2-1-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Tennis" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="assets/Image2-1.jpg"  alt="" title="image2"  width="1920" height="1080" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 26 -->
+		<div class="tp-caption tp-shape tp-shapewrapper   tp-resizeme" 
+			 id="slide-21-layer-8" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+						data-width="full"
+			data-height="full"
+			data-whitespace="nowrap"
+ 
+			data-type="shape" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1500,"speed":1490,"frame":"0","from":"z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":1010,"frame":"999","to":"auto:auto;","ease":"nothing"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5;background-color:rgba(0, 0, 0, 0.50);"> </div>
+
+		<!-- LAYER NR. 27 -->
+		<div class="tp-caption Photography-Display   tp-resizeme" 
+			 id="slide-21-layer-1" 
+			 data-x="['left','left','center','center']" data-hoffset="['1239','80','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['87','130','200','140']" 
+						data-fontsize="['60','60','60','40']"
+			data-width="['379','none','none','none']"
+			data-height="none"
+			data-whitespace="['normal','nowrap','nowrap','nowrap']"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":500,"speed":2010,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6; min-width: 379px; max-width: 379px; white-space: normal; font-weight: 100; color: rgba(255, 255, 255, 1.00);font-family:Raleway;">MASTER U BNP PARIBAS </div>
+
+		<!-- LAYER NR. 28 -->
+		<div class="tp-caption Photography-Subline-2   tp-resizeme" 
+			 id="slide-21-layer-4" 
+			 data-x="['left','left','center','center']" data-hoffset="['1244','80','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['251','189','259','191']" 
+						data-fontsize="['20','20','20','17']"
+			data-fontweight="['400','300','300','300']"
+			data-color="['rgba(7, 255, 147, 0.35)','rgba(255, 255, 255, 0.35)','rgba(255, 255, 255, 0.35)','rgba(255, 255, 255, 0.35)']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":750,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 7; white-space: nowrap; font-weight: 400; color: rgba(7, 255, 147, 0.35);">REALISATION CAPTATION </div>
+
+		<!-- LAYER NR. 29 -->
+		<div class="tp-caption Photography-Textblock   tp-resizeme" 
+			 id="slide-21-layer-7" 
+			 data-x="['left','left','center','center']" data-hoffset="['1247','80','0','6']" 
+			 data-y="['top','top','top','top']" data-voffset="['305','280','324','256']" 
+						data-lineheight="['30','30','30','26']"
+			data-width="['491','493','500','401']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"x:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 8; min-width: 491px; max-width: 491px; white-space: normal;">TEASER et AFTERMOVIES Réalisés en collaboration avec Pierre Yves Tramcourt pour le championnat du monde universitaire de Tennis de 2015 à St Grégoire.
+Pour la Fédération Française du Sport Universitaire. </div>
+
+		<!-- LAYER NR. 30 -->
+		<div class="tp-caption   tp-resizeme tp-videolayer" 
+			 id="slide-21-layer-10" 
+			 data-x="['left','left','left','left']" data-hoffset="['1032','1032','1032','1032']" 
+			 data-y="['top','top','top','top']" data-voffset="['490','490','490','490']" 
+						data-whitespace="nowrap"
+ 
+			data-type="video" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1550,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-ytid="8hxgcYi62YA" data-videoattributes="version=3&amp;enablejsapi=1&amp;html5=1&amp;volume=100&hd=1&wmode=opaque&showinfo=0&rel=0;;origin=http://www.garyrom.byethost5.com;" data-videorate="1" data-videowidth="270px" data-videoheight="150px" data-videocontrols="controls" data-videoloop="none"			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-autoplay="off" 
+			data-volume="100"			data-allowfullscreenvideo="true" 
+ data-showcoveronpause="on"
+			style="z-index: 10;"> </div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-17" data-transition="slideoverhorizontal" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1500"  data-thumb="assets/Image3-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Hyblab" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="assets/Image3.jpg"  alt="" title="image3"  width="1920" height="1080" data-bgposition="right center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 31 -->
+		<div class="tp-caption tp-shape tp-shapewrapper   tp-resizeme" 
+			 id="slide-17-layer-8" 
+			 data-x="['right','right','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
+						data-width="['650','650','600','600']"
+			data-height="full"
+			data-whitespace="nowrap"
+ 
+			data-type="shape" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1500,"speed":1490,"frame":"0","from":"z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","ease":"nothing"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5;background-color:rgba(0, 0, 0, 0.50);"> </div>
+
+		<!-- LAYER NR. 32 -->
+		<div class="tp-caption Photography-Display   tp-resizeme" 
+			 id="slide-17-layer-1" 
+			 data-x="['right','right','center','center']" data-hoffset="['80','80','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['170','130','200','140']" 
+						data-fontsize="['60','60','60','40']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":500,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6; white-space: nowrap; font-weight: 100; color: rgba(255, 255, 255, 1.00);font-family:Raleway;">TRANSMEMORIES </div>
+
+		<!-- LAYER NR. 33 -->
+		<div class="tp-caption Photography-Subline   tp-resizeme" 
+			 id="slide-17-layer-4" 
+			 data-x="['right','right','center','center']" data-hoffset="['80','80','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['229','189','259','192']" 
+						data-fontsize="['20','20','20','17']"
+			data-lineheight="['30','30','30','26']"
+			data-fontweight="['500','300','300','300']"
+			data-color="['rgba(52, 0, 165, 0.35)','rgba(255, 255, 255, 0.35)','rgba(255, 255, 255, 0.35)','rgba(255, 255, 255, 0.35)']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":750,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 7; white-space: nowrap; font-weight: 500; color: rgba(52, 0, 165, 0.35);">HYBLAB </div>
+
+		<!-- LAYER NR. 34 -->
+		<div class="tp-caption Photography-Textblock   tp-resizeme" 
+			 id="slide-17-layer-7" 
+			 data-x="['right','right','center','center']" data-hoffset="['80','80','0','6']" 
+			 data-y="['top','top','top','top']" data-voffset="['320','280','323','255']" 
+						data-lineheight="['30','30','30','26']"
+			data-width="['490','492','500','400']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1000,"speed":1510,"frame":"0","from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"x:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['right','right','right','right']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 8; min-width: 490px; max-width: 490px; white-space: normal;">Projet de site réalisé dans le cadre du laboratoire d'hybridation (Hyblab) organisé par Ouest Media Lab en décembre 2016. Des étudiants de Sciences Po Rennes, l'INSA, LISAA et Rennes II réunis autour de projets digitaux.
+Ici, un projet autour de l'histoire du Festival Transmusicales de Rennes, à découvrir bientôt sur le site de ceux-ci. </div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-22" data-transition="slideoverhorizontal" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1500"  data-thumb="assets/kkk-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Badminton" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="assets/kkk.jpg"  alt="" title="kkk"  width="1920" height="1080" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 35 -->
+		<div class="tp-caption tp-shape tp-shapewrapper   tp-resizeme" 
+			 id="slide-22-layer-8" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+						data-width="full"
+			data-height="full"
+			data-whitespace="nowrap"
+ 
+			data-type="shape" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1500,"speed":1490,"frame":"0","from":"z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":1010,"frame":"999","to":"auto:auto;","ease":"nothing"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5;background-color:rgba(0, 0, 0, 0.50);"> </div>
+
+		<!-- LAYER NR. 36 -->
+		<div class="tp-caption Photography-Display   tp-resizeme" 
+			 id="slide-22-layer-1" 
+			 data-x="['left','left','center','center']" data-hoffset="['1245','80','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['53','130','200','140']" 
+						data-fontsize="['60','60','60','40']"
+			data-width="['582','none','none','none']"
+			data-height="['199','none','none','none']"
+			data-whitespace="['normal','nowrap','nowrap','nowrap']"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":500,"speed":2010,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6; min-width: 582px; max-width: 582px; max-width: 199px; max-width: 199px; white-space: normal; font-weight: 100; color: rgba(255, 255, 255, 1.00);font-family:Raleway;">CHAMPIONNAT
+DE FRANCE
+BADMINTON </div>
+
+		<!-- LAYER NR. 37 -->
+		<div class="tp-caption Photography-Subline-2   tp-resizeme" 
+			 id="slide-22-layer-4" 
+			 data-x="['left','left','center','center']" data-hoffset="['1243','80','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['254','189','259','191']" 
+						data-fontsize="['30','20','20','17']"
+			data-fontweight="['400','300','300','300']"
+			data-color="['rgba(0, 255, 42, 0.35)','rgba(255, 255, 255, 0.35)','rgba(255, 255, 255, 0.35)','rgba(255, 255, 255, 0.35)']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":750,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 7; white-space: nowrap; font-size: 30px; font-weight: 400; color: rgba(0, 255, 42, 0.35);">TEASING / PHOTOS </div>
+
+		<!-- LAYER NR. 38 -->
+		<div class="tp-caption Photography-Textblock   tp-resizeme" 
+			 id="slide-22-layer-7" 
+			 data-x="['left','left','center','center']" data-hoffset="['1242','80','0','6']" 
+			 data-y="['top','top','top','top']" data-voffset="['325','280','324','256']" 
+						data-lineheight="['30','30','30','26']"
+			data-width="['491','493','500','401']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"x:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 8; min-width: 491px; max-width: 491px; white-space: normal;">Teaser réalisé pour le compte de la FFSU dans le cadre des championnats de France Universitaire de Badminton.
+Les photos de cette compétition seront bientôt disponibles directement ici. </div>
+
+		<!-- LAYER NR. 39 -->
+		<div class="tp-caption   tp-resizeme tp-videolayer" 
+			 id="slide-22-layer-10" 
+			 data-x="['left','left','left','left']" data-hoffset="['894','894','894','894']" 
+			 data-y="['top','top','top','top']" data-voffset="['465','465','465','465']" 
+						data-whitespace="nowrap"
+ 
+			data-type="video" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1000,"speed":1590,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+ data-ytid="_BSwBplHUKo" data-videoattributes="version=3&amp;enablejsapi=1&amp;html5=1&amp;volume=100&hd=1&wmode=opaque&showinfo=0&rel=0;;origin=http://www.garyrom.byethost5.com;" data-videorate="1" data-videowidth="339px" data-videoheight="188px" data-videocontrols="controls" data-videoloop="none"			data-textAlign="['inherit','inherit','inherit','inherit']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+			data-autoplay="off" 
+			data-volume="100"
+			style="z-index: 10;"> </div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-19" data-transition="slideoververtical" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1500"  data-thumb="assets/17091005_10155842604229746_127811015_o-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="About" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="&lt;p&gt;&lt;br data-mce-bogus=\&quot;1\&quot;&gt;&lt;/p&gt;
+">
+		<!-- MAIN IMAGE -->
+		<img src="assets/17091005_10155842604229746_127811015_o.jpg"  alt="" title="17091005_10155842604229746_127811015_o"  width="2048" height="1365" data-bgposition="left center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 40 -->
+		<div class="tp-caption Photography-Display   tp-resizeme" 
+			 id="slide-19-layer-1" 
+			 data-x="['left','left','center','center']" data-hoffset="['1243','80','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['31','130','200','140']" 
+						data-fontsize="['60','60','60','40']"
+			data-fontweight="['200','100','100','100']"
+			data-color="['rgba(58, 58, 58, 1.00)','rgba(0, 255, 222, 1.00)','rgba(0, 255, 222, 1.00)','rgba(0, 255, 222, 1.00)']"
+			data-width="['546','none','none','none']"
+			data-height="['60','none','none','none']"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":500,"speed":2010,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5; min-width: 546px; max-width: 546px; max-width: 60px; max-width: 60px; white-space: nowrap; font-weight: 200;font-family:Raleway;">COMPETENCES </div>
+
+		<!-- LAYER NR. 41 -->
+		<div class="tp-caption Photography-Subline   tp-resizeme" 
+			 id="slide-19-layer-4" 
+			 data-x="['left','left','center','center']" data-hoffset="['1299','80','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['153','189','259','192']" 
+						data-fontsize="['20','20','20','17']"
+			data-lineheight="['30','30','30','26']"
+			data-color="['rgba(255, 255, 255, 1.00)','rgba(119, 119, 119, 1.00)','rgba(119, 119, 119, 1.00)','rgba(119, 119, 119, 1.00)']"
+			data-width="['204','201','none','none']"
+			data-height="none"
+			data-whitespace="['normal','normal','nowrap','nowrap']"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":750,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6; min-width: 204px; max-width: 204px; white-space: normal; color: rgba(255, 255, 255, 1.00);">PHOTOGRAPHIE
+CAPTATION
+DESIGN </div>
+
+		<!-- LAYER NR. 42 -->
+		<div class="tp-caption Photography-Subline   tp-resizeme" 
+			 id="slide-19-layer-8" 
+			 data-x="['left','left','center','center']" data-hoffset="['1525','290','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['152','189','354','255']" 
+						data-fontsize="['20','20','20','17']"
+			data-lineheight="['30','30','30','26']"
+			data-color="['rgba(255, 255, 255, 1.00)','rgba(119, 119, 119, 1.00)','rgba(119, 119, 119, 1.00)','rgba(119, 119, 119, 1.00)']"
+			data-width="['238','582','500','384']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":750,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 7; min-width: 238px; max-width: 238px; white-space: normal; color: rgba(255, 255, 255, 1.00);">MONTAGE VFX
+REALISATION             
+HTML/CSS
+ </div>
+
+		<!-- LAYER NR. 43 -->
+		<div class="tp-caption Photography-Textblock   tp-resizeme" 
+			 id="slide-19-layer-7" 
+			 data-x="['left','left','center','center']" data-hoffset="['1243','80','0','6']" 
+			 data-y="['top','top','top','top']" data-voffset="['330','290','478','361']" 
+						data-fontsize="['27','17','17','17']"
+			data-lineheight="['30','30','30','26']"
+			data-width="['490','492','500','400']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"x:[-100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 8; min-width: 490px; max-width: 490px; white-space: normal; font-size: 27px;font-family:kayak sans bold;">Passionné de sport et d'audiovisuel, j'ai pris l'habitude de mettre mes compétences techniques au service de ma passion. </div>
+
+		<!-- LAYER NR. 44 -->
+		<div class="tp-caption Photography-Button rev-btn " 
+			 id="slide-19-layer-6" 
+			 data-x="['left','left','center','center']" data-hoffset="['1532','80','0','0']" 
+			 data-y="['top','top','bottom','bottom']" data-voffset="['556','530','100','100']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="button" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-20","delay":""}]'
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+			data-responsive="off"
+			data-frames='[{"delay":1250,"speed":2010,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[175%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"},{"frame":"hover","speed":"300","ease":"Power3.easeOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[13,13,13,13]"
+			data-paddingright="[35,35,35,35]"
+			data-paddingbottom="[13,13,13,13]"
+			data-paddingleft="[35,35,35,35]"
+
+			style="z-index: 9; white-space: nowrap;border-width:1px 1px 1px 1px;letter-spacing:1px;">CONTACTEZ MOI </div>
+
+		<!-- LAYER NR. 45 -->
+		<div class="tp-caption Photography-Display   tp-resizeme" 
+			 id="slide-19-layer-10" 
+			 data-x="['left','left','center','center']" data-hoffset="['1293','80','0','0']" 
+			 data-y="['top','top','top','top']" data-voffset="['89','130','200','140']" 
+						data-fontsize="['60','60','60','40']"
+			data-color="['rgba(61, 4, 53, 1.00)','rgba(0, 255, 222, 1.00)','rgba(0, 255, 222, 1.00)','rgba(0, 255, 222, 1.00)']"
+			data-width="['513','none','none','none']"
+			data-height="['68','none','none','none']"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":500,"speed":2010,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 10; min-width: 513px; max-width: 513px; max-width: 68px; max-width: 68px; white-space: nowrap; font-weight: 100; color: rgba(61, 4, 53, 1.00);font-family:Raleway;">NUMERIQUES </div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-20" data-transition="slideoververtical" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1500"  data-thumb="http://www.garyrom.byethost5.com/wp-content/"  data-rotate="0"  data-saveperformance="off"  data-title="Contact" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="&lt;p&gt;&lt;br data-mce-bogus=\&quot;1\&quot;&gt;&lt;/p&gt;
+">
+		<!-- MAIN IMAGE -->
+		<img src="assets/transparent.png" style='background-color:#e83410' alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 46 -->
+		<div class="tp-caption tp-shape tp-shapewrapper   tp-resizeme" 
+			 id="slide-20-layer-9" 
+			 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+			 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+						data-width="full"
+			data-height="full"
+			data-whitespace="nowrap"
+ 
+			data-type="shape" 
+			data-basealign="slide" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","ease":"nothing"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5;background-color:rgba(170, 170, 170, 0.25);"> </div>
+
+		<!-- LAYER NR. 47 -->
+		<div class="tp-caption Photography-Display   tp-resizeme" 
+			 id="slide-20-layer-1" 
+			 data-x="['left','left','left','left']" data-hoffset="['400','300','130','50']" 
+			 data-y="['top','top','top','top']" data-voffset="['240','170','200','150']" 
+						data-fontsize="['60','60','60','40']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":500,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6; white-space: nowrap; font-weight: 100; color: rgba(0, 0, 0, 1.00);font-family:Raleway;">UNE DEMANDE? </div>
+
+		<!-- LAYER NR. 48 -->
+		<div class="tp-caption Photography-Display   tp-resizeme" 
+			 id="slide-20-layer-11" 
+			 data-x="['left','left','left','left']" data-hoffset="['368','300','130','50']" 
+			 data-y="['top','top','top','top']" data-voffset="['295','227','256','199']" 
+						data-fontsize="['60','60','60','40']"
+			data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":750,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[10,10,10,10]"
+			data-paddingright="[10,10,10,10]"
+			data-paddingbottom="[10,10,10,10]"
+			data-paddingleft="[10,10,10,10]"
+
+			style="z-index: 7; white-space: nowrap; font-weight: 100; color: rgba(255, 255, 255, 1.00);font-family:Raleway;background-color:rgba(0, 0, 0, 1.00);">CONTACTEZ MOI </div>
+
+		<!-- LAYER NR. 49 -->
+		<div class="tp-caption Photography-Textblock   tp-resizeme" 
+			 id="slide-20-layer-7" 
+			 data-x="['left','left','left','left']" data-hoffset="['400','300','130','50']" 
+			 data-y="['top','top','top','top']" data-voffset="['408','344','368','454']" 
+						data-lineheight="['30','30','30','26']"
+			data-width="400"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"x:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 8; min-width: 400px; max-width: 400px; white-space: normal; color: rgba(0, 0, 0, 1.00);">Besoin de quelqu'un pour un projet autour de la valorisation numérique?
+Ou alors pour un travail audiovisuel sur le sport? </div>
+
+		<!-- LAYER NR. 50 -->
+		<div class="tp-caption Photography-Subline   tp-resizeme" 
+			 id="slide-20-layer-4" 
+			 data-x="['left','left','left','left']" data-hoffset="['400','300','130','50']" 
+			 data-y="['top','top','top','top']" data-voffset="['551','490','521','313']" 
+						data-lineheight="['30','30','30','26']"
+			data-width="['400','400','400','none']"
+			data-height="none"
+			data-whitespace="['normal','normal','nowrap','nowrap']"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1250,"speed":1500,"frame":"0","from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"x:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 9; min-width: 400px; max-width: 400px; white-space: normal; font-size: 17px; color: rgba(0, 0, 0, 1.00);"><i class="fa-icon-map-marker" style="color:#000;width:25px;"></i> 18 rue Edouard Branly 22700 Perros Guirec<br/>
+<i class="fa-icon-phone" style="color:#000;width:25px;"></i> 06.28.60.32.17<br/>
+<i class="fa-icon-envelope-o" style="color:#000;width:25px;"></i> Gary.romagny@outlook.com<br/>
+ </div>
+	</li>
+</ul>
+<div style="" class="tp-static-layers">
+
+		<!-- LAYER NR. 51 -->
+		<div class="tp-caption rev-burger revb-whitenoborder  tp-static-layer" 
+			 id="slider-2-layer-16" 
+			 data-x="['right','right','right','right']" data-hoffset="['14','14','14','14']" 
+			 data-y="['top','top','top','top']" data-voffset="['10','10','10','10']" 
+						data-width="60"
+			data-height="60"
+			data-whitespace="nowrap"
+ 
+			data-type="button" 
+			data-actions='[{"event":"click","action":"toggleclass","layer":"slider-2-layer-16","delay":"0","classname":"open"},{"event":"click","action":"togglelayer","layerstatus":"hidden","layer":"slider-2-layer-5","delay":""},{"event":"click","action":"togglelayer","layerstatus":"hidden","layer":"slider-2-layer-6","delay":""},{"event":"click","action":"togglelayer","layerstatus":"hidden","layer":"slider-2-layer-7","delay":""},{"event":"click","action":"togglelayer","layerstatus":"hidden","layer":"slider-2-layer-8","delay":""}]'
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-startslide="0" 
+			data-endslide="9" 
+			data-frames='[{"delay":999.84375,"speed":1500,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":320,"frame":"999","ease":"nothing"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[22,22,22,22]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[14,14,14,14]"
+
+			style="z-index: 57; min-width: 60px; max-width: 60px; max-width: 60px; max-width: 60px; white-space: nowrap; font-size: px; line-height: px; font-weight: 100;border-radius:50% 50% 50% 50%;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
+						  <span></span>
+						  <span></span>
+						  <span></span>
+						 </div>
+
+		<!-- LAYER NR. 52 -->
+		<a class="tp-caption   tp-static-layer" 
+ href="https://www.facebook.com/g4ryrom" target="_blank"			 id="slider-2-layer-3" 
+			 data-x="['left','left','left','left']" data-hoffset="['67','67','67','67']" 
+			 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['30','30','30','30']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+			data-visibility="['on','on','off','off']"
+ 
+			data-type="text" 
+			data-actions=''
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-startslide="0" 
+			data-endslide="9" 
+			data-frames='[{"delay":499.921875,"speed":1500,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":320,"frame":"999","to":"auto:auto;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Power3.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);bg:rgba(59, 89, 152, 1.00);"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[6,6,6,6]"
+			data-paddingright="[10,10,10,10]"
+			data-paddingbottom="[4,4,4,4]"
+			data-paddingleft="[11,11,11,11]"
+
+			style="z-index: 58; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: rgba(255, 255, 255, 1.00);background-color:rgba(0, 0, 0, 1.00);border-radius:30px 30px 30px 30px;cursor:pointer;text-decoration: none;"><i class="fa-icon-facebook"></i> </a>
+
+		<!-- LAYER NR. 53 -->
+		<a class="tp-caption   tp-static-layer" 
+ href="https://twitter.com/garyR0M" target="_blank"			 id="slider-2-layer-4" 
+			 data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']" 
+			 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['30','30','30','30']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+			data-visibility="['on','on','off','off']"
+ 
+			data-type="text" 
+			data-actions=''
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-startslide="0" 
+			data-endslide="9" 
+			data-frames='[{"delay":499.921875,"speed":1500,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":320,"frame":"999","to":"auto:auto;","ease":"nothing"},{"frame":"hover","speed":"300","ease":"Power3.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);bg:rgba(85, 172, 238, 1.00);"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[6,6,6,6]"
+			data-paddingright="[7,7,7,7]"
+			data-paddingbottom="[4,4,4,4]"
+			data-paddingleft="[9,9,9,9]"
+
+			style="z-index: 59; white-space: nowrap; font-size: 17px; line-height: 22px; font-weight: 400; color: rgba(255, 255, 255, 1.00);background-color:rgba(0, 0, 0, 1.00);border-radius:30px 30px 30px 30px;cursor:pointer;text-decoration: none;"><i class="fa-icon-twitter"></i> </a>
+
+		<!-- LAYER NR. 54 -->
+		<div class="tp-caption Photography-Menuitem   tp-static-layer" 
+			 id="slider-2-layer-5" 
+			 data-x="['right','right','right','right']" data-hoffset="['30','30','30','30']" 
+			 data-y="['top','top','top','top']" data-voffset="['80','80','80','80']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-11","delay":""},{"event":"click","action":"simulateclick","layer":"slider-2-layer-16","delay":"0"}]'
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-startslide="0" 
+			data-endslide="9" 
+			data-frames='[{"delay":"bytrigger","speed":690,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"bytrigger","speed":510,"frame":"999","to":"x:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"200","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);bg:rgba(0, 255, 222, 0.65);"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[3,3,3,3]"
+			data-paddingright="[5,5,5,5]"
+			data-paddingbottom="[3,3,3,3]"
+			data-paddingleft="[8,8,8,8]"
+			data-lasttriggerstate="keep"
+			style="z-index: 60; white-space: nowrap;cursor:pointer;">ACCUEIL </div>
+
+		<!-- LAYER NR. 55 -->
+		<div class="tp-caption Photography-Menuitem   tp-static-layer" 
+			 id="slider-2-layer-6" 
+			 data-x="['right','right','right','right']" data-hoffset="['30','30','30','30']" 
+			 data-y="['top','top','top','top']" data-voffset="['110','110','110','110']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-12","delay":""},{"event":"click","action":"simulateclick","layer":"slider-2-layer-16","delay":"0"}]'
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-startslide="0" 
+			data-endslide="9" 
+			data-frames='[{"delay":"bytrigger","speed":690,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"bytrigger","speed":510,"frame":"999","to":"x:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"200","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);bg:rgba(0, 255, 222, 0.65);"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[3,3,3,3]"
+			data-paddingright="[5,5,5,5]"
+			data-paddingbottom="[3,3,3,3]"
+			data-paddingleft="[8,8,8,8]"
+			data-lasttriggerstate="keep"
+			style="z-index: 61; white-space: nowrap;cursor:pointer;">MES PROJETS </div>
+
+		<!-- LAYER NR. 56 -->
+		<div class="tp-caption Photography-Menuitem   tp-static-layer" 
+			 id="slider-2-layer-7" 
+			 data-x="['right','right','right','right']" data-hoffset="['30','30','30','30']" 
+			 data-y="['top','top','top','top']" data-voffset="['140','140','140','140']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-19","delay":""},{"event":"click","action":"simulateclick","layer":"slider-2-layer-16","delay":"0"}]'
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-startslide="0" 
+			data-endslide="9" 
+			data-frames='[{"delay":"bytrigger","speed":690,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"bytrigger","speed":510,"frame":"999","to":"x:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"200","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);bg:rgba(0, 255, 222, 0.65);"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[3,3,3,3]"
+			data-paddingright="[5,5,5,5]"
+			data-paddingbottom="[3,3,3,3]"
+			data-paddingleft="[8,8,8,8]"
+			data-lasttriggerstate="keep"
+			style="z-index: 62; white-space: nowrap;cursor:pointer;">QUI SUIS-JE? </div>
+
+		<!-- LAYER NR. 57 -->
+		<div class="tp-caption Photography-Menuitem   tp-static-layer" 
+			 id="slider-2-layer-8" 
+			 data-x="['right','right','right','right']" data-hoffset="['30','30','30','30']" 
+			 data-y="['top','top','top','top']" data-voffset="['170','170','170','170']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+ 
+			data-type="text" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-20","delay":""},{"event":"click","action":"simulateclick","layer":"slider-2-layer-16","delay":"0"}]'
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-startslide="0" 
+			data-endslide="9" 
+			data-frames='[{"delay":"bytrigger","speed":690,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"bytrigger","speed":510,"frame":"999","to":"x:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"200","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);bg:rgba(0, 255, 222, 0.65);"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[3,3,3,3]"
+			data-paddingright="[5,5,5,5]"
+			data-paddingbottom="[3,3,3,3]"
+			data-paddingleft="[8,8,8,8]"
+			data-lasttriggerstate="keep"
+			style="z-index: 63; white-space: nowrap;cursor:pointer;">CONTACT </div>
+
+		<!-- LAYER NR. 58 -->
+		<div class="tp-caption tp-shape tp-shapewrapper   tp-static-layer" 
+			 id="slider-2-layer-9" 
+			 data-x="['right','right','center','center']" data-hoffset="['30','30','0','0']" 
+			 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['32','32','30','30']" 
+						data-width="['466','466','460','460']"
+			data-height="['87','87','87','87']"
+			data-whitespace="nowrap"
+			data-visibility="['on','on','off','off']"
+ 
+			data-type="shape" 
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-startslide="2" 
+			data-endslide="7" 
+			data-frames='[{"delay":499.921875,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"nothing"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 64;background-color:rgba(0, 0, 0, 0.65);cursor:pointer;"> </div>
+
+		<!-- LAYER NR. 59 -->
+		<div class="tp-caption photography-ImageHover2   tp-static-layer" 
+			 id="slider-2-layer-10" 
+			 data-x="['right','right','center','center']" data-hoffset="['400','400','-175','-175']" 
+			 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['50','50','50','50']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+			data-visibility="['on','on','off','off']"
+ 
+			data-type="image" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-13","delay":""}]'
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-startslide="2" 
+			data-endslide="7" 
+			data-frames='[{"delay":499.921875,"speed":1500,"frame":"0","from":"z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"500","ease":"Back.easeOut","to":"o:0.5;sX:0.8;sY:0.8;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 65; line-height: 22px;cursor:pointer;"><img src="assets/mariage3.jpg" alt="" data-ww="['70px','70px','70px','70px']" data-hh="['47px','47px','47px','47px']" width="1920" height="1080" data-no-retina> </div>
+
+		<!-- LAYER NR. 60 -->
+		<div class="tp-caption photography-ImageHover2   tp-static-layer" 
+			 id="slider-2-layer-12" 
+			 data-x="['right','right','center','center']" data-hoffset="['330','330','-105','-105']" 
+			 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['50','50','50','50']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+			data-visibility="['on','on','off','off']"
+ 
+			data-type="image" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-14","delay":""}]'
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-startslide="2" 
+			data-endslide="7" 
+			data-frames='[{"delay":600,"speed":1520,"frame":"0","from":"z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"500","ease":"Back.easeOut","to":"o:0.5;sX:0.8;sY:0.8;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 66; line-height: 22px;cursor:pointer;"><img src="assets/site.jpg" alt="" data-ww="['70px','70px','70px','70px']" data-hh="['47px','47px','47px','47px']" width="1920" height="1080" data-no-retina> </div>
+
+		<!-- LAYER NR. 61 -->
+		<div class="tp-caption photography-ImageHover2   tp-static-layer" 
+			 id="slider-2-layer-13" 
+			 data-x="['right','right','center','center']" data-hoffset="['260','260','-35','-35']" 
+			 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['50','50','50','50']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+			data-visibility="['on','on','off','off']"
+ 
+			data-type="image" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-15","delay":""}]'
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-startslide="2" 
+			data-endslide="7" 
+			data-frames='[{"delay":699.84375,"speed":1490,"frame":"0","from":"z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"500","ease":"Back.easeOut","to":"o:0.5;sX:0.8;sY:0.8;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 67; line-height: 22px;cursor:pointer;"><img src="assets/Image1.jpg" alt="" data-ww="['70px','70px','70px','70px']" data-hh="['47px','47px','47px','47px']" width="1920" height="1080" data-no-retina> </div>
+
+		<!-- LAYER NR. 62 -->
+		<div class="tp-caption photography-ImageHover2   tp-static-layer" 
+			 id="slider-2-layer-11" 
+			 data-x="['right','right','center','center']" data-hoffset="['193','193','35','35']" 
+			 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['49','49','50','50']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+			data-visibility="['on','on','off','off']"
+ 
+			data-type="image" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-16","delay":""}]'
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-startslide="2" 
+			data-endslide="7" 
+			data-frames='[{"delay":799.921875,"speed":1520,"frame":"0","from":"z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"500","ease":"Back.easeOut","to":"o:0.5;sX:0.8;sY:0.8;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 68; line-height: 22px;cursor:pointer;"><img src="assets/Image2-1.jpg" alt="" data-ww="['70px','70px','70px','70px']" data-hh="['47px','47px','47px','47px']" width="1920" height="1080" data-no-retina> </div>
+
+		<!-- LAYER NR. 63 -->
+		<div class="tp-caption photography-ImageHover2   tp-static-layer" 
+			 id="slider-2-layer-14" 
+			 data-x="['right','right','center','center']" data-hoffset="['120','120','105','105']" 
+			 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['50','50','50','50']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+			data-visibility="['on','on','off','off']"
+ 
+			data-type="image" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-17","delay":""}]'
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-startslide="2" 
+			data-endslide="7" 
+			data-frames='[{"delay":900,"speed":1490,"frame":"0","from":"z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"500","ease":"Back.easeOut","to":"o:0.5;sX:0.8;sY:0.8;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 69; line-height: 22px;cursor:pointer;"><img src="assets/Image3.jpg" alt="" data-ww="['70px','70px','70px','70px']" data-hh="['47px','47px','47px','47px']" width="1920" height="1080" data-no-retina> </div>
+
+		<!-- LAYER NR. 64 -->
+		<div class="tp-caption photography-ImageHover2   tp-static-layer" 
+			 id="slider-2-layer-15" 
+			 data-x="['right','right','center','center']" data-hoffset="['50','50','175','175']" 
+			 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['50','50','50','50']" 
+						data-width="none"
+			data-height="none"
+			data-whitespace="nowrap"
+			data-visibility="['on','on','off','off']"
+ 
+			data-type="image" 
+			data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-18","delay":""}]'
+			data-basealign="slide" 
+			data-responsive_offset="off" 
+			data-responsive="off"
+			data-startslide="2" 
+			data-endslide="7" 
+			data-frames='[{"delay":999.84375,"speed":1500,"frame":"0","from":"z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1010,"frame":"999","to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"500","ease":"Back.easeOut","to":"o:0.5;sX:0.8;sY:0.8;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255, 255, 255, 1.00);"}]'
+			data-textAlign="['left','left','left','left']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 70; line-height: 22px;cursor:pointer;"><img src="assets/kkk.jpg" alt="" data-ww="['70px','70px','70px','70px']" data-hh="['47px','47px','47px','47px']" width="1920" height="1080" data-no-retina> </div>
+</div>
+<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
+</div><!-- END REVOLUTION SLIDER -->
+		<script type="text/javascript">
+						var tpj=jQuery;
+			
+			var revapi2;
+			tpj(document).ready(function() {
+				if(tpj("#rev_slider_2_1").revolution == undefined){
+					revslider_showDoubleJqueryError("#rev_slider_2_1");
+				}else{
+					revapi2 = tpj("#rev_slider_2_1").show().revolution({
+						sliderType:"standard",
+jsFileLocation:"//www.garyrom.byethost5.com/wp-content/plugins/revslider/public/assets/js/",
+						sliderLayout:"fullscreen",
+						dottedOverlay:"none",
+						delay:9000,
+						navigation: {
+							keyboardNavigation:"off",
+							keyboard_direction: "horizontal",
+							mouseScrollNavigation:"on",
+ 							mouseScrollReverse:"default",
+							onHoverStop:"off",
+							touch:{
+								touchenabled:"on",
+								swipe_threshold: 75,
+								swipe_min_touches: 1,
+								swipe_direction: "vertical",
+								drag_block_vertical: false
+							}
+						},
+						responsiveLevels:[1240,1024,778,480],
+						visibilityLevels:[1240,1024,778,480],
+						gridwidth:[1240,1024,778,480],
+						gridheight:[868,768,960,720],
+						lazyType:"none",
+						parallax: {
+							type:"mouse",
+							origo:"enterpoint",
+							speed:400,
+							levels:[5,10,15,20,25,30,35,40,45,50,47,48,49,50,51,55],
+						},
+						shadow:0,
+						spinner:"off",
+						stopLoop:"on",
+						stopAfterLoops:0,
+						stopAtSlide:1,
+						shuffle:"off",
+						autoHeight:"off",
+						fullScreenAutoWidth:"off",
+						fullScreenAlignForce:"off",
+						fullScreenOffsetContainer: "",
+						fullScreenOffset: "",
+						disableProgressBar:"on",
+						hideThumbsOnMobile:"off",
+						hideSliderAtLimit:0,
+						hideCaptionAtLimit:0,
+						hideAllCaptionAtLilmit:0,
+						debugMode:false,
+						fallbacks: {
+							simplifyAll:"off",
+							nextSlideOnWindowFocus:"off",
+							disableFocusListener:false,
+						}
+					});
+				}
+			});	/*ready*/
+		</script>
+		
+
+		</body>
+</html>
